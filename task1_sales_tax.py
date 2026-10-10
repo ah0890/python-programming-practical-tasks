@@ -16,13 +16,18 @@ for employee in range(1, NUMBER_OF_EMPLOYEES + 1):
     print(f"\nEmployee {employee}")
     print("-" * 45)
 
-    # Keep asking until the user enters a valid number
+    # Keep asking until the user enters a valid, non-negative number
     while True:
         try:
             sales = float(input("Enter sales amount (Rs.): "))
-            break
         except ValueError:
             print("Invalid input! Please enter a number.")
+            continue
+
+        if sales < 0:
+            print("Sales amount cannot be negative. Please try again.")
+        else:
+            break
 
     # Calculate tax according to the sales amount
     if sales < 50000:
