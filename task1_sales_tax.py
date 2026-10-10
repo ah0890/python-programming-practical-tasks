@@ -5,7 +5,7 @@
 
 NUMBER_OF_EMPLOYEES = 5
 
-total_sales = 0
+total_sales = 0.0
 
 print("=" * 45)
 print("      SALES EMPLOYEE TAX CALCULATOR")
